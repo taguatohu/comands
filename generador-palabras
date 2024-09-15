@@ -1,0 +1,11 @@
+<?php
+// Lista de palabras
+$palabras = ["palabra 1", "palabra 2", "palabra 3", "palabra 4", "palabra 5"];
+
+// Seleccionar una palabra aleatoria
+$palabra_aleatoria = $palabras[array_rand($palabras)];
+
+// Devolver la palabra como JSON
+header('Content-Type: application/json');
+echo json_encode(["palabra" => $palabra_aleatoria]);
+?>
